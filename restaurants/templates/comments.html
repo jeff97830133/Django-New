@@ -26,6 +26,9 @@
         {% endif %}
 
         <br /><br />
+		{% for e in errors %}
+			<p style="color:red;">{{ e }}</p>
+		{% endfor %}
 		
 		 <form action="" method="post"> {% csrf_token %}
 		 <table>
