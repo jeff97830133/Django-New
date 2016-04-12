@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from views import welcome
 from restaurants.views import menu, list_restaurants, comment
+from views import login, index, logout
 
 
 urlpatterns = patterns('',
@@ -14,4 +15,7 @@ urlpatterns = patterns('',
 	url(r'^welcome/$', welcome),
 	url(r'^restaurants_list/$', list_restaurants),
 	url(r'^comment/(\d{1,5})/$', comment),
+	url(r'^accounts/login/$', login),
+	url(r'^index/$', index),
+	url(r'^accounts/logout/$', logout),
 )
